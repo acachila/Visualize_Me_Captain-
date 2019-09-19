@@ -1,6 +1,7 @@
+Project 2
+
 Group: 
 Tyler Cobb, Armi Cachila, Paul Stephenson, Yazan Rizeq 
-Project 2
 
 Proposal
 Introduction:
