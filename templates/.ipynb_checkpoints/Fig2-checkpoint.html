@@ -1,0 +1,61 @@
+<head>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Numeric JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+</head>
+
+<body>
+
+    <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <script>
+   var data = [{
+       values: [96.40153983, 95.53902659, 95.19847742, 94.11719747, 93.4730618, 92.33917571, 9.880217608, 9.540820686, 9.23630506, 9.145236477],
+       labels: ['Croatia', 'Barbados', 'China', 'Romania', 'Uzbekistan', 'Turks and Caicos Islands', 'Senegal', 'Sao Tome and Principe', 'Congo, Rep.', 'Vanuatu'],
+           domain: { column: 0 },
+            text: 'CO2',
+            name: 'CO2 emissions during the study period',
+            hoverinfo: 'label+percent+name',
+            hole: .4,
+            type: 'pie'
+        }, {
+           values: [850631000000, 76533925488, 73305000000000, 2168610000000, 532632000000, 8956736570, 235001000000, 2517100418, 142271000000, 9426727784],
+           labels: ['Croatia', 'Barbados', 'China', 'Romania', 'Uzbekistan', 'Turks and Caicos Islands', 'Senegal', 'Sao Tome and Principe', 'Congo, Rep.', 'Vanuatu'],
+            text: 'GDP',
+            textposition: 'inside',
+            domain: { column: 1 },
+           name: 'Total GDP during the study period',
+            hoverinfo: 'label+percent+name',
+            hole: .4,
+            type: 'pie'
+        }];
+
+        var layout = {
+            title: 'Top Global CO2 Producers Vs GDP During the Study Period',
+            grid: { rows: 1, columns: 2 },
+            showlegend: true,
+            annotations: [
+                {
+                    font: {
+                        size: 14
+                    },
+                    showarrow: false,
+                    text: 'GHG',
+                    x: 0.17,
+                    y: 0.5
+                },
+                {
+                    font: {
+                        size: 14
+                    },
+                    showarrow: false,
+                    text: 'CO2',
+                    x: 0.82,
+                    y: 0.5
+                }
+            ]
+        };
+
+        Plotly.newPlot('myDiv', data, layout, { showSendToCloud: true });
+    </script>
+</body>

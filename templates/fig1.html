@@ -1,0 +1,46 @@
+<head>
+  <!-- Plotly.js -->
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+  <script>
+    var trace1 = {
+  x: [2005, 2006, 2007, 2008,2009,2010,2011,2012,2013,2014],
+  y: [29.525776968,
+  30.908574713,
+  32.272265184,
+  33.390460093,
+  32.008899864,
+  32.037857974,
+  33.329959884,
+  32.909226658,
+  31.730407089,
+  31.170601145],
+   mode: 'lines'
+};
+
+ var trace2 = {
+  x: [2005, 2006, 2007, 2008,2009,2010,2011,2012,2013,2014],
+  y: [2.4,
+  2.9,
+  3.8,
+  4.9,
+  5.4,
+  6.3,
+  7.8,
+  8.8,
+  9.9,
+  10],
+  mode: 'lines'
+};
+
+
+var data = [ trace1, trace2 ];
+
+var layout = {};
+
+Plotly.newPlot('myDiv', data, layout, {showSendToCloud: true});
+  </script>
+</body>

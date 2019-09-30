@@ -1,0 +1,49 @@
+<head>
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  
+  <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+  <script>
+   var trace1 = {
+  x: ['Croatia', 'Barbados', 'China', 'Romania', 'Uzbekistan', 'Turks and Caicos Islands', 'Senegal', 'Sao Tome and Principe', 'Congo, Rep.', 'Vanuatu'],
+          y: [45347181470,
+3897300000,
+2290000000000,
+98452791983,
+14307509839,
+578645760,
+11022821632,
+136450661.3,
+6087003176,
+394962552.3
+],
+          name: '2005',
+          type: 'bar'
+};
+
+var trace2 = {
+   x: ['Croatia', 'Barbados', 'China', 'Romania', 'Uzbekistan', 'Turks and Caicos Islands', 'Senegal', 'Sao Tome and Principe', 'Congo, Rep.', 'Vanuatu'],
+          y: [57682343708,
+4608350000,
+10400000000000,
+200000000000,
+76658542757,
+823968140,
+19770840286,
+348941656.4,
+14177437982,
+814954307
+],
+          name: '2014',
+          type: 'bar'
+};
+
+var data = [trace1, trace2];
+var layout = {barmode: 'group'};
+
+Plotly.newPlot('myDiv', data, layout, {}, {showSendToCloud:true});
+  </script>
+</body>

@@ -1,0 +1,69 @@
+<head>
+  <!-- Plotly.js -->
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+  <script>
+    var trace1 = {
+  x: [2005, 2006, 2007, 2008,2009,2010,2011,2012,2013,2014],
+  y: [29.525776968,
+  30.908574713,
+  32.272265184,
+  33.390460093,
+  32.008899864,
+  32.037857974,
+  33.329959884,
+  32.909226658,
+  31.730407089,
+  31.170601145],
+   mode: 'lines'
+};
+
+ var trace2 = {
+  x: [2005, 2006, 2007, 2008,2009,2010,2011,2012,2013,2014],
+  y: [2.4,
+  2.9,
+  3.8,
+  4.9,
+  5.4,
+  6.3,
+  7.8,
+  8.8,
+  9.9,
+  10],
+  mode: 'lines'
+};
+
+var trace3 = {
+  x: ['Croatia', 'Barbados', 'China', 'Romania', 'Uzbekistan', 'Turks and Caicos Islands', 'Senegal', 'Sao Tome and Principe', 'Congo, Rep.', 'Vanuatu'],
+          y: [5.241676788, 4.896888786, 4.523178064, 4.524305495, 4.480783353, 4.294215756, 0.524087845, 0.48902027, 0.271271608, 0.280349003],
+          name: '2005',
+          type: 'bar'
+};
+
+var trace4 = {
+   x: ['Croatia', 'Barbados', 'China', 'Romania', 'Uzbekistan', 'Turks and Caicos Islands', 'Senegal', 'Sao Tome and Principe', 'Congo, Rep.', 'Vanuatu'],
+          y: [3.973804906, 4.467476521, 7.543907641, 3.516153691, 3.420722746, 5.805988295, 0.624760004, 0.580793656, 0.653359719, 0.583633966],
+          name: '2014',
+          type: 'bar'
+};
+var data = [trace1, trace2,trace3, trace4];  
+      
+fig = tools.make_subplots(
+    rows=2,
+    cols=2,
+    print_grid=True
+)
+
+fig.append_trace(trace1, 1, 1)
+fig.append_trace(trace2, 2, 1)
+fig.append_trace(trace3, 1, 2)
+fig.append_trace(trace4, 2, 2)
+
+      Plotly.newPlot('myDiv', data, layout, {}, {showSendToCloud:true});
+  </script>    
+    
+    
+</body>
